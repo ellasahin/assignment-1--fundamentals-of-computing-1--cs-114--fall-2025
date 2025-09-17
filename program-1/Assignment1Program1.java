@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Assignment1Program1 {
@@ -24,27 +25,64 @@ public class Assignment1Program1 {
  //                  EEEEEEEE      SSSSSS
 
         System.out.println();
-  }
 
-public static void second(String[] args){
+//2
 
-          Scanner sc = new Scanner(System.in);
+ Scanner scanner = new Scanner(System.in);
+
 
         System.out.print("Enter a 5-character string: ");
-        String input = sc.nextLine();
+        String input = scanner.nextLine();
+
 
         if (input.length() == 5) {
 
-            String trimmed = input.substring(1, 4);
+            String middle = input.substring(1, 4);
 
-            String reversed = new StringBuilder(trimmed).reverse().toString();
 
-            System.out.println("Result: " + reversed);
+            String reversed = new StringBuilder(middle).reverse().toString();
+
+
+            System.out.println("Saved string: " + reversed);
         } else {
-            System.out.println("Please enter exactly 5 characters.");
+            System.out.println("Error: Enter only 5 characters.");
         }
-            System.out.println();
-        sc.close();
 
-    }
+
+
+//3
+
+
+
+        System.out.print("Enter temperature in Fahrenheit: ");
+        double fahrenheit = scanner.nextDouble();
+
+
+        double celsius = (5.0 / 9.0) * (fahrenheit - 32);
+
+
+        System.out.println("Temperature in Celsius: " + celsius);
+
+        scanner.close();
+
+//4
+
+Random rand = new Random();
+
+        int min = 32;
+        int max = 16384;
+
+
+        int randomNumber = rand.nextInt(max - min + 1) + min;
+
+
+        System.out.println("Random number: " + randomNumber);
+
+        scanner.close();
+
+//5
+
+      }
+
+
 }
