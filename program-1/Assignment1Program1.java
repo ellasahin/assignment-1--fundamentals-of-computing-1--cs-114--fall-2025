@@ -63,7 +63,7 @@ public class Assignment1Program1 {
 
         System.out.println("Temperature in Celsius: " + celsius);
 
-        scanner.close();
+
 
 //4
 
@@ -82,7 +82,7 @@ Random rand = new Random();
 
 //5
 
-      }
+      System.out.print("Your new string is:"  + celsius + randomNumber);}
 
 
 }
